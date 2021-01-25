@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,register_converter
+from django.urls import path,register_converter,include
 
 from meiduo_mall2.utils import converters
 
@@ -23,4 +23,7 @@ register_converter(converters.MobileConverter,'mobile')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # 用户名重复
+    path('',include('apps.users.urls'))
 ]
