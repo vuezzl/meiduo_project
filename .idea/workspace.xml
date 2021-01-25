@@ -1,117 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2f1bacd-8580-45e8-81b5-924fc095e4ed" name="Default Changelist" comment="７自定义user模型类，指定用户模型类，文件迁移">
-      <change afterPath="$PROJECT_DIR$/front_end_pc/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/12.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/13.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/14.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/15.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/16.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods/9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/goods_judge.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/QQ-weixin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/adv01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/adv02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/banner01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/banner02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/banner03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/bar_code.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/cat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/clock.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/clock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/find-password.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods001.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods002.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods003.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods004.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods005.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods006.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods007.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods008.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/goods/goods009.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/goods_450.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/icons02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/interval_line.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/left_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/login_banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/logo02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/pay_icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/pic_code.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/register_banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/selected.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/shine.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/shop_cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/slide01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/slide02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/slide03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/slide04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/stars.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/success.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/images/time_count_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/axios-0.18.0.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/base.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/cart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/goods_judge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/host.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/jquery-1.12.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/oauth_callback.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/order_success.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/place_order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/slide.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/user_center_info.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/user_center_pass.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/user_center_site.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/js/vue-2.5.16.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/oauth_callback.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/order_success.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/pay_success.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/place_order.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/success_verify_email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/user_center_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/user_center_order.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/user_center_pass.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front_end_pc/user_center_site.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_mall2/apps/users/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_mall2/apps/users/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_mall2/apps/users/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_mall2/apps/users/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_mall2/apps/users/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_mall2/apps/users/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_mall2/apps/users/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_mall2/apps/users/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meiduo_mall2/apps/users/views.py" afterDir="false" />
+    <list default="true" id="e2f1bacd-8580-45e8-81b5-924fc095e4ed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/utils/converters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/meiduo_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/meiduo_project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/settings/dev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,17 +18,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/settings/dev.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
+            <state relative-caret-position="2821">
               <caret line="203" column="30" selection-start-line="203" selection-start-column="30" selection-end-line="203" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="348">
+              <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+              <folding>
+                <element signature="e#636#668#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/urls/converters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" selection-start-line="4" selection-end-line="11" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/utils/converters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -143,19 +61,16 @@
         <entry file="file://$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/logs/meiduo.log">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meiduo_mall2/apps/users/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-              <folding>
-                <element signature="e#7#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="22">
+              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -166,19 +81,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/conf/global_settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="498" lean-forward="true" selection-start-line="498" selection-end-line="498" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/contrib/auth/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1380">
-              <caret line="219" column="17" lean-forward="true" selection-start-line="219" selection-start-column="17" selection-end-line="219" selection-end-column="17" />
+            <state relative-caret-position="192">
+              <caret line="138" column="1" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -218,7 +124,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>class User</find>
+      <find>class U</find>
       <find>AUTH</find>
+      <find>create</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -233,6 +141,8 @@
         <option value="$PROJECT_DIR$/meiduo_mall2/apps/users/views.py" />
         <option value="$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/settings/dev.py" />
         <option value="$PROJECT_DIR$/meiduo_mall2/apps/users/models.py" />
+        <option value="$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/utils/converters.py" />
+        <option value="$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/urls.py" />
       </list>
     </option>
   </component>
@@ -263,19 +173,6 @@
               <item name="meiduo_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="meiduo_project" type="462c0819:PsiDirectoryNode" />
               <item name="meiduo_mall2" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meiduo_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meiduo_project" type="462c0819:PsiDirectoryNode" />
-              <item name="meiduo_mall2" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="meiduo_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="meiduo_project" type="462c0819:PsiDirectoryNode" />
-              <item name="meiduo_mall2" type="462c0819:PsiDirectoryNode" />
               <item name="meiduo_mall2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -291,6 +188,13 @@
               <item name="meiduo_mall2" type="462c0819:PsiDirectoryNode" />
               <item name="meiduo_mall2" type="462c0819:PsiDirectoryNode" />
               <item name="settings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="meiduo_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="meiduo_project" type="462c0819:PsiDirectoryNode" />
+              <item name="meiduo_mall2" type="462c0819:PsiDirectoryNode" />
+              <item name="meiduo_mall2" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -363,7 +267,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611489644249</updated>
-      <workItem from="1611489645428" duration="10008000" />
+      <workItem from="1611489645428" duration="13435000" />
     </task>
     <task id="LOCAL-00001" summary="２配置工程目录apps logs templates utils,配置开发环境settings">
       <created>1611490689520</created>
@@ -414,11 +318,18 @@
       <option name="project" value="LOCAL" />
       <updated>1611504900979</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="７自定义user模型类，指定用户模型类，文件迁移">
+      <created>1611541850872</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1611541850872</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10008000" />
+    <option name="totallyTimeSpent" value="13435000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1566" height="1050" extended-state="6" />
@@ -431,11 +342,11 @@
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3289183" />
+      <window_info anchor="bottom" id="Terminal" weight="0.3289183" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289183" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289183" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289183" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -462,7 +373,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="７自定义user模型类，指定用户模型类，文件迁移" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/meiduo_project$manage.coverage" NAME="manage Coverage Results" MODIFIED="1611507065647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/meiduo_mall2" />
+    <SUITE FILE_PATH="coverage/meiduo_project$manage.coverage" NAME="manage Coverage Results" MODIFIED="1611548163314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/meiduo_mall2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/settings.py">
@@ -502,7 +413,7 @@
     <entry file="file://$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/logs/meiduo.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -515,24 +426,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/contrib/auth/hashers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/contrib/auth/base_user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -543,39 +440,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/conf/global_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="498" lean-forward="true" selection-start-line="498" selection-end-line="498" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/contrib/auth/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="219" column="17" lean-forward="true" selection-start-line="219" selection-start-column="17" selection-end-line="219" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/settings/dev.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
+        <state relative-caret-position="2821">
           <caret line="203" column="30" selection-start-line="203" selection-start-column="30" selection-end-line="203" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/meiduo_mall2/apps/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="22">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/contrib/auth/base_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/conf/global_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2568">
+          <caret line="498" lean-forward="true" selection-start-line="498" selection-end-line="498" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="138" column="1" selection-start-line="138" selection-start-column="1" selection-end-line="138" selection-end-column="1" />
           <folding>
-            <element signature="e#7#35#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/meiduo_mall2/lib/python3.6/site-packages/django/urls/converters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/utils/converters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meiduo_mall2/meiduo_mall2/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+          <folding>
+            <element signature="e#636#668#0" expanded="true" />
           </folding>
         </state>
       </provider>
