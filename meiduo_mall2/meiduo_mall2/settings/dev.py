@@ -197,3 +197,8 @@ LOGGING = {
 # 实例化日志对象
 import logging
 logger = logging.getLogger('django')
+
+
+# 指定本项目使用我们自定义的模型类:
+#                  '应用名称.User'
+AUTH_USER_MODEL = 'users.User'
