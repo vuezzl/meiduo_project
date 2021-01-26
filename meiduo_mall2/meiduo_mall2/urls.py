@@ -25,5 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # 用户名重复
-    path('',include('apps.users.urls'))
+    path('',include('apps.users.urls')),
+    # 验证码
+    path('',include('apps.verifications.urls'))
 ]
