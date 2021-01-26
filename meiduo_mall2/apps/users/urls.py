@@ -8,4 +8,6 @@ urlpatterns = [
     path('usernames/<username:username>/count/', views.UsernameCountView.as_view()),
     # 手机号重复
     path('mobiles/<mobile:mobile>/count/', views.MobileCountView.as_view()),
+    # 注册
+    path('register/',views.RegisterView.as_view())
 ]
