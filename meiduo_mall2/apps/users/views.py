@@ -8,6 +8,7 @@ from django.views import View
 import json
 from apps.users.models import User
 import re
+from django_redis import get_redis_connection
 
 # 注册
 from meiduo_mall2.settings.dev import logger
@@ -37,6 +38,17 @@ class RegisterView(View):
             return JsonResponse({'code': 400, 'errmsg': '手机号格式不正确'})
         if allow == 'False':
             return JsonResponse({'code': 400, 'errmsg': '必须勾选同意'})
+
+        # 链接redis数据库
+        redis_client = get_redis_connection('verify_code')
+        redis_sms_code = redis_client.get(mobile)
+        if not redis_sms_code:
+            return JsonResponse({'code': 400, 'errmsg': '短信验证码过期了'})
+        if not sms_code == redis_sms_code.decode():
+            return JsonResponse({'code': 400, 'errmsg': '短信验证码有误'})
+
+
+
 
         try:
             user = User.objects.create_user(username=username,password=password,mobile=mobile)

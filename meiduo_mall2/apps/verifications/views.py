@@ -35,6 +35,13 @@ class SMSCodeView(View):
         # 和前端比较验证码是否一致
         if not image_code  == redis_image_code.decode():
             return JsonResponse({'code': 400, 'errmsg': '验证码输入错误'})
+        # 避免频繁发送短信
+        send_flag = redis_client.get('send_flag_%s' %mobile)
+        if send_flag:
+            return JsonResponse({'code':400,'errmsg':'短信发送太频繁'})
+        # 开启开关
+        redis_client.setex('send_flag_%s' %mobile,60,1)
+
         # 生成随机的６位验证码
         sms_code = random.randint(100000,999999)
 
