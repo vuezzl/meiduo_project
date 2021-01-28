@@ -28,6 +28,11 @@ class LoginView(View):
             return JsonResponse({'code': 400, 'errmsg': '用户名格式不正确'})
         if not re.match(r'^[a-zA-Z0-9]{8,20}$', password):
             return JsonResponse({'code': 400, 'errmsg': '密码格式不正确'})
+        # 多账号登录
+        if re.match(r'^1[3-9]\d{9}$', username):
+            User.USERNAME_FIELD = 'mobile'
+        else:
+            User.USERNAME_FIELD = 'username'
         user = authenticate(username=username,password=password)
         if user is None:
             return JsonResponse({'code': 400, 'errmsg': '用户名或密码错误'})
@@ -38,7 +43,6 @@ class LoginView(View):
             request.session.set_expiry(None)
 
         return JsonResponse({'code': 0, 'errmsg': '登录成功'})
-
 
 
 # 注册
