@@ -11,10 +11,9 @@ from celery_tasks.sms.tasks import ccp_send_sms_code
 from apps.verifications.libs.captcha.captcha import captcha
 from redis import StrictRedis
 from django_redis import get_redis_connection
+
+
 # 短信验证码
-
-
-
 class SMSCodeView(View):
     def get(self,request,mobile):
         # 接收参数
@@ -57,9 +56,6 @@ class SMSCodeView(View):
         # @param temp_id 模板Id
 
         return JsonResponse({'code':0,'errmsg':'短信发送成功'})
-
-
-
 
 
 # 图片验证码

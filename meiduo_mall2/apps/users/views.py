@@ -1,4 +1,4 @@
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate
 from django.http import JsonResponse
 from django.shortcuts import render
 
@@ -12,8 +12,36 @@ from django_redis import get_redis_connection
 
 # 注册
 from meiduo_mall2.settings.dev import logger
+# 登录
+class LoginView(View):
+    def post(self,request):
+        # 接收参数
+        data_dict = json.loads(request.body.decode())
+        # 解析参数
+        username = data_dict.get('username')
+        password = data_dict.get('password')
+        remembered = data_dict.get('remembered')
+        # 校验参数
+        if not all(['username','password']):
+            return JsonResponse({'code':400,'errmsg':'参数不齐'})
+        if not re.match(r'^[a-zA-Z0-9_-]{5,20}$', username):
+            return JsonResponse({'code': 400, 'errmsg': '用户名格式不正确'})
+        if not re.match(r'^[a-zA-Z0-9]{8,20}$', password):
+            return JsonResponse({'code': 400, 'errmsg': '密码格式不正确'})
+        user = authenticate(username=username,password=password)
+        if user is None:
+            return JsonResponse({'code': 400, 'errmsg': '用户名或密码错误'})
+        login(request,user)
+        if remembered == False:
+            request.session.set_expiry(0)
+        else:
+            request.session.set_expiry(None)
+
+        return JsonResponse({'code': 0, 'errmsg': '登录成功'})
 
 
+
+# 注册
 class RegisterView(View):
     def post(self,request):
         # 接收参数
@@ -46,9 +74,6 @@ class RegisterView(View):
             return JsonResponse({'code': 400, 'errmsg': '短信验证码过期了'})
         if not sms_code == redis_sms_code.decode():
             return JsonResponse({'code': 400, 'errmsg': '短信验证码有误'})
-
-
-
 
         try:
             user = User.objects.create_user(username=username,password=password,mobile=mobile)

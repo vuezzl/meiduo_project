@@ -9,5 +9,8 @@ urlpatterns = [
     # 手机号重复
     path('mobiles/<mobile:mobile>/count/', views.MobileCountView.as_view()),
     # 注册
-    path('register/',views.RegisterView.as_view())
+    path('register/',views.RegisterView.as_view()),
+    # 用户登录
+    path('login/',views.LoginView.as_view()),
+
 ]
