@@ -6,12 +6,13 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views import View
+from celery_tasks.sms.tasks import ccp_send_sms_code
 
 from apps.verifications.libs.captcha.captcha import captcha
 from redis import StrictRedis
 from django_redis import get_redis_connection
 # 短信验证码
-from apps.verifications.libs.yuntongxun.ccp_sms import CCP
+
 
 
 class SMSCodeView(View):
@@ -47,8 +48,10 @@ class SMSCodeView(View):
 
         # 将手机号验证码存入redis数据库中
         redis_client.setex(mobile,300,sms_code)
-        CCP().send_template_sms(mobile,[sms_code, 5],1)
-        print('短信验证码:',sms_code)
+
+        ccp_send_sms_code.delay(mobile, sms_code)
+
+
         # @param to 手机号码
         # @param datas 内容数据 格式为数组 例如：{'12','34'}，如不需替换请填 ''
         # @param temp_id 模板Id

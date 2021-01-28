@@ -9,20 +9,20 @@ import sys
 # sys.path.insert(0, '../../../')
 
 # from meiduo_mall.libs.yuntongxun.CCPRestSDK import REST
-from apps.verifications.libs.yuntongxun.CCPRestSDK import REST
+from .CCPRestSDK import REST
 
 # 全局取消证书验证，就是解决部分172001：网络错误的问题
 ssl._create_default_https_context = ssl._create_unverified_context
 
 
 # 说明：主账号，登陆云通讯网站后，可在"控制台-应用"中看到开发者主账号ACCOUNT SID
-_accountSid = '8aaf0708759c7fce0175d192f81d104b'
+_accountSid = '8aaf070862181ad5016236f3bcc811d5'
 
 # 说明：主账号Token，登陆云通讯网站后，可在控制台-应用中看到开发者主账号AUTH TOKEN
-_accountToken = '78cb45e992a641e783814d7e8ec84cb0'
+_accountToken = '4e831592bd464663b0de944df13f16ef'
 
 # 请使用管理控制台首页的APPID或自己创建应用的APPID
-_appId = '8aaf0708759c7fce0175d192f9221052'
+_appId = '8a216da87249b813017258fb505008b8'
 
 # 说明：请求地址，生产环境配置成app.cloopen.com
 _serverIP = 'sandboxapp.cloopen.com'
@@ -71,5 +71,5 @@ class CCP(object):
 
 # if __name__ == '__main__':
 #     # 注意： 测试的短信模板编号为1
-    # CCP().send_template_sms('测试的手机号码', ['短信验证码', '过期时间'], '模板ID')
-    # CCP().send_template_sms('18834488733', ['888888', 5], 1)
+#     # CCP().send_template_sms('测试的手机号码', ['短信验证码', '过期时间'], '模板ID')
+#     CCP().send_template_sms('17600992168', ['888888', 5], 1)
