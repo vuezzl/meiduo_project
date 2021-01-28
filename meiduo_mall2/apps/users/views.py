@@ -41,8 +41,11 @@ class LoginView(View):
             request.session.set_expiry(0)
         else:
             request.session.set_expiry(None)
+        # 首页显示用户名
+        response = JsonResponse({'code': 0, 'errmsg': '登录成功'})
+        response.set_cookie('username',user.username,max_age=3600*24*14)
 
-        return JsonResponse({'code': 0, 'errmsg': '登录成功'})
+        return response
 
 
 # 注册
@@ -87,8 +90,10 @@ class RegisterView(View):
             login(request,user)
         except Exception as e:
             return JsonResponse({'code': 400, 'errmsg': '保持登录失败'})
-
-        return JsonResponse({'code':0,'errmsg':'ok'})
+        # 首页显示用户名
+        response = JsonResponse({'code': 0, 'errmsg': '注册成功'})
+        response.set_cookie('username', user.username, max_age=3600 * 24 * 14)
+        return response
 
 
 # 用户名重复
