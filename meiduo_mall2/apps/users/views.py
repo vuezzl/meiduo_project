@@ -1,4 +1,5 @@
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.shortcuts import render
 
@@ -12,6 +13,26 @@ from django_redis import get_redis_connection
 
 # 注册
 from meiduo_mall2.settings.dev import logger
+
+# 用户中心，判断是否登录
+from meiduo_mall2.utils.views import LoginRequiredJSONMixin
+
+
+class UserInfoView(LoginRequiredJSONMixin,View):
+    def get(self,request):
+
+        print('登陆了')
+        return JsonResponse({
+             "code":0,
+             "errmsg":"ok",
+             "info_data":{
+                   "username":"zs",
+                   "mobile": "15144556677",
+                   "email": "",
+                   "email_active": 'true'
+             }
+        })
+
 # 退出登录
 class LogoutView(View):
     def delete(self,request):

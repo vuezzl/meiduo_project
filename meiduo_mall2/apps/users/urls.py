@@ -14,7 +14,8 @@ urlpatterns = [
     path('login/',views.LoginView.as_view()),
     # 退出登录
     path('logout/',views.LogoutView.as_view()),
-
+    #用户中心--判断用户是否登录
+    path('info/',views.UserInfoView.as_view())
 
 
 ]
