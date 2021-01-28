@@ -1,4 +1,4 @@
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.http import JsonResponse
 from django.shortcuts import render
 
@@ -12,6 +12,16 @@ from django_redis import get_redis_connection
 
 # 注册
 from meiduo_mall2.settings.dev import logger
+# 退出登录
+class LogoutView(View):
+    def delete(self,request):
+        logout(request)
+        response = JsonResponse({'code':0,'errmsg':'退出登录'})
+        # 删除cookie
+        response.delete_cookie('username')
+
+        return response
+
 # 登录
 class LoginView(View):
     def post(self,request):
