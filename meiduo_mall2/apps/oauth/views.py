@@ -16,6 +16,7 @@ from django_redis import get_redis_connection
 
 from apps.oauth.models import OAuthQQUser
 from apps.users.models import User
+from meiduo_mall2.utils.secret import SecretOauth
 
 
 class QQUserView(View):
@@ -32,13 +33,16 @@ class QQUserView(View):
             access_token = oauth.get_access_token(code)
             open_id = oauth.get_open_id(access_token)
         except Exception as e:
-            # oppenid要进行加密
+
+
             return JsonResponse({'code': 400, 'errmsg': '获取qq信息失败'})
 
         try:
             oauth_qq = OAuthQQ.objects.get(open_id=open_id)
         except Exception as e:
             print('没绑定过')
+            # oppenid要进行加密
+            open_id = SecretOauth().dumps({'openid':open_id})
             return JsonResponse({'code': 300, 'errmsg': '还没有绑定','access_token':open_id})
 
         else:
@@ -72,6 +76,12 @@ class QQUserView(View):
             return JsonResponse({'code': 400, 'errmsg': '短信验证码过期了'})
         if not sms_code == redis_sms_code.decode():
             return JsonResponse({'code': 400, 'errmsg': '短信验证码有误'})
+        # openid进行解密
+        openid = SecretOauth().loads(access_token).get('openid')
+        if not openid:
+            return JsonResponse({'code':400,'errmsg':'openid失效了'})
+
+
         # 判断手机号是否存在
         try:
             user = User.objects.get(mobile=mobile)
