@@ -27,5 +27,7 @@ urlpatterns = [
     # 用户名重复
     path('',include('apps.users.urls')),
     # 验证码
-    path('',include('apps.verifications.urls'))
+    path('',include('apps.verifications.urls')),
+    # qq登录
+    path('',include('apps.oauth.urls')),
 ]
