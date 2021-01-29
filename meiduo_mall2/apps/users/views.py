@@ -14,22 +14,45 @@ from django_redis import get_redis_connection
 # 注册
 from meiduo_mall2.settings.dev import logger
 
-# 用户中心，判断是否登录
+
 from meiduo_mall2.utils.views import LoginRequiredJSONMixin
 
+#添加和验证邮箱
+class EmailView(View):
+    def put(self,request):
+        data_dict = json.loads(request.body.decode())
+        email = data_dict.get('email')
+        if not email:
+            return JsonResponse({'code':400,'errmsg':'参数email有误'})
+        if not re.match(r'^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
+            return JsonResponse({'code': 400,'errmsg': '参数email有误'})
+        try:
+            request.user.email=email
+            request.user.save()
+        except:
+            return JsonResponse({'code':400,'errmsg':'添加邮箱失败'})
 
+        return JsonResponse({'code':0,'errmsg':'ok'})
+
+
+
+
+
+# 用户中心，查询用户基本信息
 class UserInfoView(LoginRequiredJSONMixin,View):
+
     def get(self,request):
+        user = request.user
 
         print('登陆了')
         return JsonResponse({
              "code":0,
              "errmsg":"ok",
              "info_data":{
-                   "username":"zs",
-                   "mobile": "15144556677",
-                   "email": "",
-                   "email_active": 'true'
+                   "username":user.username,
+                   "mobile": user.mobile,
+                   "email": user.email,
+                   "email_active": user.email_active
              }
         })
 

@@ -15,7 +15,10 @@ urlpatterns = [
     # 退出登录
     path('logout/',views.LogoutView.as_view()),
     #用户中心--判断用户是否登录
-    path('info/',views.UserInfoView.as_view())
+    path('info/',views.UserInfoView.as_view()),
+    # 添加和验证邮箱
+    path('emails/', views.EmailView.as_view()),
+
 
 
 ]
