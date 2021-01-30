@@ -7,7 +7,7 @@ from django.shortcuts import render
 import django
 from django.views import View
 import json
-from apps.users.models import User
+from apps.users.models import User, Address
 import re
 from django_redis import get_redis_connection
 
@@ -17,6 +17,65 @@ from meiduo_mall2.settings.dev import logger
 
 from meiduo_mall2.utils.views import LoginRequiredJSONMixin
 
+# 新增地址
+class CreateAddressView(LoginRequiredJSONMixin,View):
+    def post(self,request):
+        data_dict = json.loads(request.body.decode())
+        receiver = data_dict.get('receiver')
+        province_id = data_dict.get('province_id')
+        city_id = data_dict.get('city_id')
+        district_id = data_dict.get('district_id')
+        place = data_dict.get('place')
+        mobile = data_dict.get('mobile')
+        tel = data_dict.get('tel')
+        email = data_dict.get('email')
+        if not all([receiver,province_id,city_id,district_id,place,mobile]):
+            return JsonResponse({'code': 400, 'errmsg': '缺少必传参数'})
+        if not re.match(r'^1[3-9]\d{9}$', mobile):
+            return JsonResponse({'code': 400, 'errmsg': '参数mobile有误'})
+        if tel:
+            if not re.match(r'^(0[0-9]{2,3}-)?([2-9][0-9]{6,7})+(-[0-9]{1,4})?$', tel):
+                return JsonResponse({'code': 400, 'errmsg': '参数tel有误'})
+        if email:
+            if not re.match(r'^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
+                return JsonResponse({'code': 400, 'errmsg': '参数email有误'})
+
+        try:
+            address=Address.objects.create(
+                user=request.user,
+                title=receiver,
+                receiver=receiver,
+                province_id=province_id,
+                city_id=city_id,
+                district_id=district_id,
+                place=place,
+                mobile=mobile,
+                tel=tel,
+                email=email
+
+            )
+            if not request.user.default_address:
+                request.user.default_address = address
+
+        except Exception as e:
+            logger.error(e)
+            return JsonResponse({'code': 400, 'errmsg': '新增地址失败'})
+
+        address_dict = {
+            "id": address.id,
+            "title": address.title,
+            "receiver": address.receiver,
+            "province": address.province.name,
+            "city": address.city.name,
+            "district": address.district.name,
+            "place": address.place,
+            "mobile": address.mobile,
+            "tel": address.tel,
+            "email": address.email
+        }
+
+        # 响应保存结果
+        return JsonResponse({'code': 0, 'errmsg': '新增地址成功', 'address': address_dict})
 #添加和验证邮箱
 class EmailView(View):
     def put(self,request):
@@ -172,7 +231,6 @@ class UsernameCountView(View):
 
 
 # 手机号重复
-
 class MobileCountView(View):
     def get(self,request,mobile):
         count = User.objects.filter(mobile=mobile).count()

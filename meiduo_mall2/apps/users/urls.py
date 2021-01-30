@@ -18,6 +18,8 @@ urlpatterns = [
     path('info/',views.UserInfoView.as_view()),
     # 添加和验证邮箱
     path('emails/', views.EmailView.as_view()),
+    # 新增地址
+    path('addresses/create/', views.CreateAddressView.as_view()),
 
 
 
