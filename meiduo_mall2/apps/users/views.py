@@ -26,17 +26,19 @@ class EmailView(View):
             return JsonResponse({'code':400,'errmsg':'参数email有误'})
         if not re.match(r'^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
             return JsonResponse({'code': 400,'errmsg': '参数email有误'})
+        # 业务逻辑
         try:
             request.user.email=email
             request.user.save()
         except:
             return JsonResponse({'code':400,'errmsg':'添加邮箱失败'})
 
+        # 发送邮件
+        verify_url = '邮箱链接'
+        from celery_tasks.emails.tasks import send_verify_email
+        send_verify_email.delay(verify_url,email)
+
         return JsonResponse({'code':0,'errmsg':'ok'})
-
-
-
-
 
 # 用户中心，查询用户基本信息
 class UserInfoView(LoginRequiredJSONMixin,View):

@@ -30,4 +30,6 @@ urlpatterns = [
     path('',include('apps.verifications.urls')),
     # qq登录
     path('',include('apps.oauth.urls')),
+    # 收货地址
+    # path('',include('apps.areas.urls')),
 ]
