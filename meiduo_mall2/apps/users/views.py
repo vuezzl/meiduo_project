@@ -16,6 +16,94 @@ from meiduo_mall2.settings.dev import logger
 
 
 from meiduo_mall2.utils.views import LoginRequiredJSONMixin
+# 修改地址
+class UpdateDestroyAddressView(LoginRequiredJSONMixin,View):
+    def put(self,request):
+        data_dict = json.loads(request.body.decode())
+        address_id = data_dict.get('address_id')
+        receiver = data_dict.get('receiver')
+        province_id = data_dict.get('province_id')
+        city_id = data_dict.get('city_id')
+        district_id = data_dict.get('district_id')
+        place = data_dict.get('place')
+        mobile = data_dict.get('mobile')
+        tel = data_dict.get('tel')
+        email = data_dict.get('email')
+        # 校验参数
+        if not all([receiver, province_id, city_id, district_id, place, mobile]):
+            return JsonResponse({'code': 400,
+                                      'errmsg': '缺少必传参数'})
+
+        if not re.match(r'^1[3-9]\d{9}$', mobile):
+            return JsonResponse({'code': 400,
+                                      'errmsg': '参数mobile有误'})
+
+        if tel:
+            if not re.match(r'^(0[0-9]{2,3}-)?([2-9][0-9]{6,7})+(-[0-9]{1,4})?$', tel):
+                return JsonResponse({'code': 400,
+                                          'errmsg': '参数tel有误'})
+        if email:
+            if not re.match(r'^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$', email):
+                return JsonResponse({'code': 400,
+                                          'errmsg': '参数email有误'})
+        try:
+            Address.objects.filter(id=address_id).updata(
+                user = request.user,
+                title = receiver,
+                receiver=receiver,
+                province_id=province_id,
+                city_id=city_id,
+                district_id=district_id,
+                place=place,
+                mobile=mobile,
+                tel=tel,
+                email=email
+            )
+        except Exception as e:
+            logger.error(e)
+            return JsonResponse({'code': 400,
+                                      'errmsg': '更新地址失败'})
+        address = Address.objects.get(id=address_id)
+        address_dict = {
+            "id": address.id,
+            "title": address.title,
+            "receiver": address.receiver,
+            "province": address.province.name,
+            "city": address.city.name,
+            "district": address.district.name,
+            "place": address.place,
+            "mobile": address.mobile,
+            "tel": address.tel,
+            "email": address.email
+        }
+        return JsonResponse({'code': 0,
+                                  'errmsg': '更新地址成功',
+                                  'address': address_dict})
+# 展示地址
+class AddressView(LoginRequiredJSONMixin,View):
+    def get(self,request):
+        addresses = Address.objects.filter(user=request.user,is_deleted=False)
+        address_list = []
+        for address in addresses:
+            address_list.append({
+                "id": address.id,
+                "title": address.title,
+                "receiver": address.receiver,
+                "province": address.province.name,
+                "city":address.city.name,
+                "district": address.district.name,
+                "place": address.place,
+                "mobile": address.mobile,
+                "tel": address.tel,
+                "email": address.email
+            })
+        default_id = request.user.default_address_id
+        return JsonResponse({
+            'code':0,
+            'errmsg':'ok',
+            'default_address_id':default_id,
+            'addresses':address_list
+        })
 
 # 新增地址
 class CreateAddressView(LoginRequiredJSONMixin,View):
@@ -76,6 +164,7 @@ class CreateAddressView(LoginRequiredJSONMixin,View):
 
         # 响应保存结果
         return JsonResponse({'code': 0, 'errmsg': '新增地址成功', 'address': address_dict})
+
 #添加和验证邮箱
 class EmailView(View):
     def put(self,request):
@@ -162,7 +251,6 @@ class LoginView(View):
 
         return response
 
-
 # 注册
 class RegisterView(View):
     def post(self,request):
@@ -210,7 +298,6 @@ class RegisterView(View):
         response.set_cookie('username', user.username, max_age=3600 * 24 * 14)
         return response
 
-
 # 用户名重复
 class UsernameCountView(View):
     def get(self,request,username):
@@ -228,7 +315,6 @@ class UsernameCountView(View):
         }
 
         return JsonResponse(data_dict)
-
 
 # 手机号重复
 class MobileCountView(View):

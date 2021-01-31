@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'apps.verifications',
     'apps.oauth',
     'apps.areas',
+    'apps.contents',
+    'apps.goods',
 ]
 
 # 中间件

@@ -20,6 +20,10 @@ urlpatterns = [
     path('emails/', views.EmailView.as_view()),
     # 新增地址
     path('addresses/create/', views.CreateAddressView.as_view()),
+    # 展示地址
+    path('addresses/', views.AddressView.as_view()),
+    # 修改地址
+    path('addresses/<int:address_id>', views.UpdateDestroyAddressView.as_view()),
 
 
 
